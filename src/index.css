@@ -1,13 +1,66 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@layer base {
+  body {
+    @apply scroll-smooth
+    overflow-x-hidden;
+  }
+  li {
+    @apply cursor-pointer
+    list-none
+    font-bold;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.underliner {
+  position: relative;
+}
+
+.underliner:after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  height: 3px;
+  width: 0;
+  transition: all 300ms ease;
+}
+
+.underliner-black:after {
+  background-color: #d00000;
+}
+
+.underliner:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.modal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.language {
+  position: absolute;
+  bottom: -8px;
+  transform: scale(0);
+  transition: all 300ms ease;
+  font-weight: 700;
+}
+
+.dark {
+  --color-bg-primary: #242424;
+  --color-text-primary: #fefefe;
+  --color-bg-secondary: #fefefe;
+  --color-text-secondary: #242424;
+}
+
+.light {
+  --color-bg-primary: #fefefe;
+  --color-text-primary: #242424;
+  --color-bg-secondary: #242424;
+  --color-text-secondary: #fefefe;
 }

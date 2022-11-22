@@ -1,0 +1,13 @@
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsBx="https://boxy-svg.com"
+      viewBox="0 0 500 500"
+    >
+      <path
+        fill="none"
+        stroke="#D00000"
+        strokeWidth="10"
+        d="M232.247 151.156l84.846 146.958H147.401l84.846-146.958z"
+        bxShape="triangle 147.401 151.156 169.692 146.958 0.5 0 1@4cfb8017"
+      ></path>
+    </svg>
