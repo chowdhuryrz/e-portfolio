@@ -7,12 +7,12 @@ import { ImLink, ImGithub } from "react-icons/im";
 
 function Projects({ moveBackground }) {
   return (
-    <div id="projects" className="z-10 mt-60 lg:mt-40">
+    <div id="projects" className="z-50 mt-60 lg:mt-40">
       <h1 className="text-center text-5xl font-medium md:px-7 md:text-6xl lg:text-7xl">
         Some of my <span className="text-[#d00000] font-bold">Projects:</span>
       </h1>
       <main
-        className="max-w-[1100px] flex flex-col space-y-32 md:space-y-40 w-full mx-auto my-20 lg:mt-40 z-10"
+        className="max-w-[1100px] flex flex-col space-y-32 md:space-y-40 w-full mx-auto my-20 lg:mt-40 z-50 md:px-10 lg:px-0"
         onMouseMove={(event) => moveBackground(event)}
       >
         {/* Left */}

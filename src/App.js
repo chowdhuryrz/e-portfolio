@@ -5,11 +5,9 @@ import Home from "./components/Home";
 import Modal from "./components/Modal";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
+import Background from "./components/Background";
 import { ThemeProvider } from "./context/ThemeContext";
-import Circle from "./assets/circle.svg";
-import Triangle from "./assets/triangle.svg";
-import Eclipse from "./assets/eclipse.svg";
-import Star from "./assets/star.svg";
+
 import Resume from "./assets/resume.pdf";
 
 function App() {
@@ -67,72 +65,8 @@ function App() {
     <ThemeProvider>
       <BrowserRouter>
         <div className="bg-primary text-primary">
-          <img
-            id="shape"
-            src={Circle}
-            alt=""
-            className="w-20 h-20 fixed left-20 top-72 select-none circle"
-          />
-          <img
-            id="shape"
-            src={Circle}
-            alt=""
-            className="w-20 h-20 fixed right-72 top-96 select-none circle"
-          />
-          <img
-            id="shape"
-            src={Triangle}
-            alt=""
-            className="w-28 h-28 fixed right-24 top-52 select-none"
-          />
-          <img
-            id="shape"
-            src={Triangle}
-            alt=""
-            className="w-28 h-28 fixed left-[600px] top-64 select-none"
-          />
-          <img
-            id="shape"
-            src={Triangle}
-            alt=""
-            className="w-28 h-28 fixed left-24 top-[500px] select-none"
-          />
-          <img
-            id="shape"
-            src={Eclipse}
-            alt=""
-            className="w-28 h-28 fixed left-72 top-96 select-none"
-          />
-          <img
-            id="shape"
-            src={Eclipse}
-            alt=""
-            className="w-28 h-28 fixed left-[700px] top-[500px] select-none"
-          />
-          <img
-            id="shape"
-            src={Star}
-            alt=""
-            className="w-28 h-28 fixed left-20 top-24 select-none star"
-          />
-          <img
-            id="shape"
-            src={Star}
-            alt=""
-            className="w-28 h-28 fixed right-[500px] top-44 select-none star"
-          />
-          <img
-            id="shape"
-            src={Star}
-            alt=""
-            className="w-28 h-28 fixed right-56 bottom-0 select-none star"
-          />
-          <img
-            id="shape"
-            src={Eclipse}
-            alt=""
-            className="w-28 h-28 fixed left-[500px] top-20 select-none"
-          />
+          <Background />
+
           <Navbar openModal={handleModal} moveBackground={moveBackground} />
 
           {modal && (
